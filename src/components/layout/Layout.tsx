@@ -16,7 +16,7 @@ export default function Layout({ children }: {
         <title>BuildTheOne</title>
         <link rel="icon" href="/favicon.ico"></link>
         <meta name="keywords" content="web developer,mobile developer" />
-        <meta name="description" content="A passionate developer, a minimalistic, and a challenger." />
+        <meta name="description" content="A passionate developer, a minimalistic designer, and a challenger." />
       </Head>
 
       <main className={inconsolata.className + " " + `${dark ? "bg-black text-white" : "bg-slate-200"} flex flex-col md:items-center w-full h-screen justify-between overflow-auto text-lg`}>

@@ -39,8 +39,8 @@ export default function Home() {
 
         {/* Photo */}
         <div className="flex gap-8 justify-center items-center">
-          <div className={`rounded-lg overflow-auto relative w-32 h-32`}>
-            <Image src={'/profile.jpeg'} alt='profile' fill={true} />
+          <div className={`rounded-lg overflow-auto relative w-40 h-40`}>
+            <Image src={'/profile.jpg'} alt='profile' fill={true} />
           </div>
 
         </div>
