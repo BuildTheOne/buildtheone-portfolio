@@ -15,10 +15,10 @@ export default function Navbar() {
   const { dark, changeTheme } = useTheme()
 
   const navItems: NavItems[] = [
-    { name: "Home", link: "/", icon: "", },
-    { name: "Skills", link: "/skills", icon: "", },
-    { name: "Project", link: "/project", icon: "", },
-    { name: "Resume", link: "/resume", icon: "", },
+    { name: "Home", link: "/", },
+    { name: "CV", link: "/cv", },
+    { name: "Skills", link: "/skills", },
+    { name: "Project", link: "/project", },
   ]
 
   const iconSize = "w-6 h-6"
@@ -34,14 +34,14 @@ export default function Navbar() {
             if (router.pathname == item.link) {
               if (router.pathname != "/") {
                 return (
-                  <Link key={i} href={item.link} className="font-black">
+                  <Link key={i} href={item.link} className={`border-b font-extrabold ${dark ? "border-white" : "border-black"}`}>
                     {item.name}
                   </Link>
                 )
               }
             }
             return (
-              <Link key={i} href={item.link} className="hover:font-black">
+              <Link key={i} href={item.link} className={`hover:border-b hover:font-extrabold ${dark ? "border-white" : "border-black"}`}>
                 {item.name}
               </Link>
             )
@@ -61,7 +61,7 @@ export default function Navbar() {
       {/* Mobile view */}
       <nav className="flex flex-col md:hidden justify-between items-center w-full ">
         <div className="flex gap-2 justify-between items-center w-full py-2 px-4 z-20">
-          <Link href="/">BuildTheOne</Link>
+          <Link href="/" className="font-black">BuildTheOne</Link>
           <div className="flex gap-4">
             <button type="button" onClick={() => changeTheme()} className="">
               {dark ?
@@ -86,6 +86,17 @@ export default function Navbar() {
           <div className={`${open ? "" : "-translate-y-96"} flex absolute transition w-full`}>
             <div className={`flex flex-col w-full border-b rounded-b-lg ${dark ? "bg-black border-white" : "bg-slate-200 border-black"}`}>
               {navItems.map((item, i) => {
+                if (router.pathname == item.link) {
+                  if (router.pathname != "/") {
+                    return (
+                      <Link key={i} href={item.link} onClick={() => setOpen(false)}>
+                    <div className={`p-2 w-full text-center font-black`}>
+                      {item.name}
+                    </div>
+                  </Link>
+                    )
+                  }
+                }
                 return (
                   <Link key={i} href={item.link} onClick={() => setOpen(false)}>
                     <div className={`p-2 w-full text-center hover:font-black`}>

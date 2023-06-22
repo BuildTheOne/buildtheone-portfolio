@@ -4,7 +4,7 @@ import Link from "next/link"
 interface ProjectItem {
   name: string,
   desc: string,
-  link: string,
+  link?: string,
   techs?: string[],
 }
 
@@ -30,6 +30,11 @@ export default function Project() {
       link: "https://github.com/BuildTheOne/randomizer_app",
       techs: ['Flutter'],
     },
+    {
+      name: "Noorumi Inverntory System",
+      desc: "Restaurant nventory system for Noorumi Company",
+      techs: ['Django'],
+    },
   ]
 
   const listTechColor = new Map<String, String>([
@@ -37,7 +42,7 @@ export default function Project() {
     ['css', "bg-[#2965f1] text-white border-[#2965f1]"],
     ['javascript', "bg-[#F0DB4F] text-black border-[#F0DB4F]"],
     ['reactjs', "bg-[#61DBFB] text-black border-[#61DBFB]"],
-    ['flutter', "bg-[#027DFD] text-white border-[#027DFD]"],
+    ['flutter', "bg-[#027DFD] text-black border-[#027DFD]"],
     ['django', "bg-[#092e20] text-white border-[#092e20]"],
     ['nodejs', "bg-[#339933] text-black border-[#339933]"],
     ['nextjs', "bg-[#000000] text-white border-white"],
@@ -56,11 +61,33 @@ export default function Project() {
   ])
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-      {projectList.map((project, i) => {
-        return (
-          <Link key={i} href={project.link} target="_blank">
-            <div className={`p-4 border rounded-lg flex flex-col gap-2 ${dark ? "border-white" : "border-black"}`}>
+    <div className="flex flex-col gap-4">
+      <h1 className="block font-bold text-2xl md:hidden p-2 text-center">Projects</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {projectList.map((project, i) => {
+          if (project.link) {
+            return (
+              <Link key={i} href={project.link} target="_blank">
+                <div className={`p-4 border rounded-lg flex flex-col gap-2 ${dark ? "border-white" : "border-black"}`}>
+                  <p className="font-bold text-lg">{project.name}</p>
+                  <p className="">{project.desc}</p>
+
+                  <div className="flex gap-2 flex-wrap">
+                    {project.techs?.map((tech, j) => {
+                      const techColor = listTechColor.get(tech.toLowerCase().replace(".", "").replace(" ", ""))
+                      return (
+                        <div key={j} className={`px-1 py-0.5 border rounded-md ${techColor}`}>
+                          {tech}
+                        </div>
+                      )
+                    })}
+                  </div>
+                </div>
+              </Link>
+            )
+          }
+          return (
+            <div key={i} className={`p-4 border rounded-lg flex flex-col gap-2 ${dark ? "border-white" : "border-black"}`}>
               <p className="font-bold text-lg">{project.name}</p>
               <p className="">{project.desc}</p>
 
@@ -75,9 +102,9 @@ export default function Project() {
                 })}
               </div>
             </div>
-          </Link>
-        )
-      })}
+          )
+        })}
+      </div>
     </div>
   )
 }
