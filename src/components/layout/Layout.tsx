@@ -1,4 +1,4 @@
-import { useTheme } from "../../context/ThemeContext";
+import { useTheme } from "@/context/ThemeContext";
 import Head from "next/head";
 import { Inconsolata } from "next/font/google";
 import Navbar from "../Navbar/Navbar";
