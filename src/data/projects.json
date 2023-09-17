@@ -1,0 +1,25 @@
+[
+  {
+    "name": "BuildTheOne Portfolio",
+    "desc": "BuildTheOne Personal Portfolio",
+    "link": "https://buildtheone.vercel.app/",
+    "techstack": ["Next.js"]
+  },
+  {
+    "name": "Random Tools",
+    "desc": "React web that contains various tools, like password generator, randomizer, etc.",
+    "link": "https://buildtheone-tools.vercel.app/",
+    "techstack": ["Next.js"]
+  },
+  {
+    "name": "Randomizer App",
+    "desc": "Flutter app to create and randomize from list",
+    "link": "https://github.com/BuildTheOne/randomizer_app",
+    "techstack": ["Flutter"]
+  },
+  {
+    "name": "Noorumi Inventory System",
+    "desc": "A restaurant inventory system for Noorumi Company",
+    "techstack": ["Django"]
+  }
+]

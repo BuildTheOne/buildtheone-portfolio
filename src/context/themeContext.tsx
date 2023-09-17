@@ -1,5 +1,11 @@
-import { ReactNode, createContext, useContext, useEffect, useState } from "react";
-import { getCookie, setCookie } from 'cookies-next';
+import {
+  ReactNode,
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
+import { getCookie, setCookie } from "cookies-next";
 
 type ThemeContextProps = {
   dark: boolean;
@@ -8,7 +14,7 @@ type ThemeContextProps = {
 
 const ThemeContext = createContext<ThemeContextProps>({
   dark: true,
-  changeTheme: () => { },
+  changeTheme: () => {},
 });
 
 export function useTheme() {
@@ -24,20 +30,17 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
 
   const changeTheme = () => {
     setDark(!dark);
-    setCookie('dark', !dark);
+    setCookie("dark", !dark);
   };
   const value = { dark, changeTheme };
 
   useEffect(() => {
-    setDark((getCookie('dark') == true ? true : false) ?? true)
-    // setCookie('dark', dark);
-  }, [dark])
+    setDark((getCookie("dark") == "true" ? true : false) ?? true);
+  }, [dark]);
 
   return (
     <>
-      <ThemeContext.Provider value={value}>
-        {children}
-      </ThemeContext.Provider>
+      <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
     </>
   );
 }
