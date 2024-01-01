@@ -82,6 +82,10 @@ const NESTJS = {
   color: "bg-[#E11E4D] text-white border-[#E11E4D]",
   key: "NESTJS",
 };
+const GOLANG = {
+  color: "bg-[#00ADD8] text-black border-[#00ADD8]",
+  key: "GOLANG",
+};
 
 const TechStack = (key: string) => {
   switch (key) {
@@ -129,6 +133,8 @@ const TechStack = (key: string) => {
       return MONGODB.color;
     case NESTJS.key:
       return NESTJS.color;
+    case GOLANG.key:
+      return GOLANG.color;
     default:
       break;
   }

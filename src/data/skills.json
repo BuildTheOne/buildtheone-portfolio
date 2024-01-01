@@ -1,7 +1,7 @@
 [
   {
     "name": "Programming Language",
-    "subSkill": ["Python", "Java"]
+    "subSkill": ["Python", "Java", "Golang"]
   },
   {
     "name": "Web Development",
@@ -23,6 +23,6 @@
   },
   {
     "name": "Database",
-    "subSkill": ["MySQL", "PostgreSQL", "MongoDB"]
+    "subSkill": ["PostgreSQL", "MySQL", "MongoDB"]
   }
 ]
