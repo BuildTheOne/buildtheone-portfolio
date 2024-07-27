@@ -3,41 +3,29 @@
     "name": "BuildTheOne Portfolio",
     "desc": "BuildTheOne Personal Portfolio",
     "link": "https://buildtheone.vercel.app/",
-    "techstack": [
-      "Next.js"
-    ]
+    "techstack": ["Next.js"]
   },
   {
     "name": "Random Tools",
     "desc": "React web that contains various tools, like password generator, randomizer, etc.",
     "link": "https://buildtheone-tools.vercel.app/",
-    "techstack": [
-      "Next.js"
-    ]
+    "techstack": ["Next.js"]
   },
   {
     "name": "Randomizer App",
     "desc": "Flutter app to create and randomize from list",
     "link": "https://github.com/BuildTheOne/randomizer_app",
-    "techstack": [
-      "Flutter"
-    ]
+    "techstack": ["Flutter"]
   },
   {
     "name": "Noorumi Inventory System",
     "desc": "A restaurant inventory system for Noorumi Company",
-    "techstack": [
-      "Django"
-    ]
+    "techstack": ["Django"]
   },
   {
     "name": "N'Lingko",
-    "desc": "Backend for N'Lingko App for PT Jaklingko Indonesia",
-    "link":"https://play.google.com/store/apps/details?id=com.jaklingkoindonesia.nlingko&hl=id-en",
-    "techstack": [
-      "Nest.JS",
-      "Node.JS",
-      "PostgreSQL"
-    ]
+    "desc": "Backend for N'Lingko App created for PT Jaklingko Indonesia",
+    "link": "https://play.google.com/store/apps/details?id=com.jaklingkoindonesia.nlingko&hl=id-en",
+    "techstack": ["Nest.JS", "Node.JS", "PostgreSQL"]
   }
 ]

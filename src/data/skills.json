@@ -1,28 +1,28 @@
 [
   {
     "name": "Programming Language",
-    "subSkill": ["Python", "Java", "Golang"]
+    "skill": ["Python", "Java", "Golang"]
   },
   {
     "name": "Web Development",
-    "subSkill": [
+    "skill": [
       "HTML",
       "CSS",
       "Javascript",
-      "Node.JS",
-      "React.JS",
-      "Next.JS",
+      "Node.js",
+      "React.js",
+      "Next.js",
       "Django",
       "Spring",
-      "Nest.JS"
+      "Nest.js"
     ]
   },
   {
     "name": "Mobile Development",
-    "subSkill": ["Flutter", "Android Native"]
+    "skill": ["Flutter", "Kotlin"]
   },
   {
     "name": "Database",
-    "subSkill": ["PostgreSQL", "MySQL", "MongoDB"]
+    "skill": ["PostgreSQL", "MySQL", "MongoDB"]
   }
 ]
